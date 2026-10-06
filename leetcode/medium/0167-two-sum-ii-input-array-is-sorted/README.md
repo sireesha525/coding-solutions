@@ -55,31 +55,33 @@ Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We ret
 
 ## Solution
 
-**Language:** Python  
-**Runtime:** 11 ms (beats 11.66%)  
-**Memory:** 22.4 MB (beats 28.11%)  
-**Submitted:** 2026-10-06T00:00:48.099Z  
+**Language:** Java  
+**Runtime:** 2 ms (beats 96.51%)  
+**Memory:** 48.6 MB (beats 25.03%)  
+**Submitted:** 2026-10-06T00:19:20.030Z  
 
-```py
-class Solution:
-    def twoSum(self, numbers: list[int], target: int) -> list[int]:
-        res = []
-        left = 0
-        right = len(numbers) - 1
+```java
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        int left = 0;
+        int right = numbers.length-1;
+        while(left<right){
+            int sum = numbers[left]+numbers[right];
+            if (sum==target){
+                return new int[]{left + 1,right + 1};
+            }
+            else if(sum > target){
+                right -= 1;
+            }
+            else {
+                left += 1;
+            }
 
-        while left < right:
-            total = numbers[left] + numbers[right]
-
-            if total == target:
-                res.append(left + 1)
-                res.append(right + 1)
-                return res
-
-            elif total > target:
-                right -= 1
-
-            else:
-                left += 1
+        }
+        return new int[]{};
+        
+    }
+}
 ```
 
 ---
