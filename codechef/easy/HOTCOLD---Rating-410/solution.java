@@ -6,19 +6,18 @@ class Codechef
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-		Scanner sc = new Scanner(System.in);
-		
-		// X is the withdrawal amount, Y is the initial balance
-		int x = sc.nextInt();
-		double y = sc.nextDouble();
-		
-		// Check if the withdrawal amount is a multiple of 5 
-		// and if there is enough balance to cover the amount plus the 0.50 charge
-		if (x % 5 == 0 && y >= x + 0.50) {
-		    y -= (x + 0.50);
+		// your code goes here
+		Scanner sc=new Scanner (System.in);
+		int t=sc.nextInt();
+		while(t-->0){
+		    int c=sc.nextInt();
+		    if(c>20){
+		        System.out.println("HOT");
+		    }
+		    else{
+		        System.out.println("COLD");
+		    }
 		}
-		
-		// Print the final balance with exactly 2 decimal places
-		System.out.printf("%.2f\n", y);
+
 	}
 }
