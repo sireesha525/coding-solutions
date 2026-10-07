@@ -4,80 +4,51 @@
 
 ## Problem
 
-### ATM
+### Is it hot or cold
 
-Pooja would like to withdraw X US Dollar from an ATM. The cash machine will only accept the transaction if X is a multiple of 5, and Pooja's account balance has enough cash to perform the withdrawal transaction (including bank charges). For each successful withdrawal the bank charges 0.50 US Dollar.
-
-Calculate Pooja's account balance after an attempted transaction.
+Chef considers the climate `HOT` if the temperature is  **above**  $20$, otherwise he considers it `COLD`. You are given the temperature $C$, find whether the climate is `HOT` or `COLD`.
 
 ### Input Format
-
-Each input contains 2 numbers $X$ and $Y$.
-$X$ is the amount of cash which Pooja wishes to withdraw.
-$Y$ is Pooja's initial account balance.
-
+- The first line of input will contain a single integer $T$, denoting the number of test cases.
+- The first and only line of each test case contains a single integer, the temperature $C$.
 ### Output Format
 
-Output the account balance after the attempted transaction, given as a number with two digits of precision. If there is not enough money in the account to complete the transaction, output the current bank balance.
+For each test case, print on a new line whether the climate is `HOT` or `COLD`.
+
+You may print each character of the string in either uppercase or lowercase (for example, the strings `hOt`, `hot`, `Hot`, and `HOT` will all be treated as identical).
 
 ### Constraints
-- $0 \lt X \leq 2000$ - the amount of cash which Pooja wishes to withdraw.
-- $0 \leq Y \leq 2000$ with two digits of precision - Pooja's initial account balance.
+- $1 \leq T \leq 50$
+- $0 \leq C \leq 40$
 ### Sample 1:
 Input
 Output
 
 ```
-30 120.00
-```
-
-```
-89.50
-```
-
-### Explanation:
-
-Example - Successful Transaction
-
-### Sample 2:
-Input
-Output
-
-```
-42 120.00
+2
+21
+16
 
 ```
 
 ```
-120.00
+HOT
+COLD
+
 ```
 
 ### Explanation:
 
-Example - Incorrect Withdrawal Amount (not multiple of 5)
+ **Test case $1$:**  The temperature is $21$, which is more than $20$. So, Chef considers the climate `HOT`.
 
-### Sample 3:
-Input
-Output
-
-```
-300 120.00
-```
-
-```
-120.00
-```
-
-### Explanation:
-
-Example - Insufficient Funds
+ **Test case $2$:**  The temperature is $16$, which is not more than $20$. So, Chef considers the climate `COLD`.
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T23:48:19.261Z  
+**Submitted:** 2026-10-07T23:57:03.159Z  
 
 ```java
 import java.util.*;
@@ -88,22 +59,22 @@ class Codechef
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-		Scanner sc = new Scanner(System.in);
-		
-		// X is the withdrawal amount, Y is the initial balance
-		int x = sc.nextInt();
-		double y = sc.nextDouble();
-		
-		// Check if the withdrawal amount is a multiple of 5 
-		// and if there is enough balance to cover the amount plus the 0.50 charge
-		if (x % 5 == 0 && y >= x + 0.50) {
-		    y -= (x + 0.50);
+		// your code goes here
+		Scanner sc=new Scanner (System.in);
+		int t=sc.nextInt();
+		while(t-->0){
+		    int c=sc.nextInt();
+		    if(c>20){
+		        System.out.println("HOT");
+		    }
+		    else{
+		        System.out.println("COLD");
+		    }
 		}
-		
-		// Print the final balance with exactly 2 decimal places
-		System.out.printf("%.2f\n", y);
+
 	}
 }
+
 ```
 
 ---
