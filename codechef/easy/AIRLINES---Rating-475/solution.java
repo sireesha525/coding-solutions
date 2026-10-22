@@ -12,7 +12,11 @@ class Codechef
 		while(t-->0){
 		    int x=sc.nextInt();
 		    int y=sc.nextInt();
-		    System.out.println(Math.min(x,y));
+		    int z=sc.nextInt();
+		    int maxPassengers = Math.min(10 * x, y);
+		    
+		    // Maximum earnings
+		    System.out.println(maxPassengers * z);
 		}
 
 	}
