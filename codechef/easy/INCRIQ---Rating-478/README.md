@@ -64,7 +64,7 @@ After learning a musical instrument, Chef's final IQ will be $120+7=127$. Since 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-23T13:42:27.940Z  
+**Submitted:** 2026-10-23T13:42:50.987Z  
 
 ```java
 import java.util.*;
@@ -78,7 +78,7 @@ class Codechef
 		// your code goes here
 		Scanner sc=new Scanner (System.in);
 		int x=sc.nextInt();
-		if(x<170){
+		if(x<=170){
 		    System.out.println("YES");
 		}
 		else{
