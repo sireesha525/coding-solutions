@@ -54,7 +54,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-01T09:34:15.424Z  
+**Submitted:** 2026-10-24T14:01:33.340Z  
 
 ```java
 import java.util.*;
@@ -73,7 +73,7 @@ class Codechef
 		    int x=sc.nextInt();
 		    int y=sc.nextInt();
 		    int z=sc.nextInt();
-		    System.out.println(w+z*(x-y));
+		    System.out.println(w + z * (x - y));
 		}
 
 	}
