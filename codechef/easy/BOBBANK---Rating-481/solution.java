@@ -14,7 +14,7 @@ class Codechef
 		    int x=sc.nextInt();
 		    int y=sc.nextInt();
 		    int z=sc.nextInt();
-		    System.out.println(w+z*(x-y));
+		    System.out.println(w + z * (x - y));
 		}
 
 	}
