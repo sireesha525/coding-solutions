@@ -10,11 +10,15 @@ class Codechef
 		Scanner sc=new Scanner(System.in);
 		int t=sc.nextInt();
 		while(t-->0){
-		    int x=sc.nextInt();
-		    int y=sc.nextInt();
-		    int z=sc.nextInt();
-		    int maxMangoes = (z - y) / x;
-		    System.out.println(maxMangoes);
+		    int R1=sc.nextInt();
+		    int R2=sc.nextInt();
+		    int R3=sc.nextInt();
+		    if(R1>R2+R3 || R2>R1+R3 || R3>R1+R2){
+		        System.out.println("YES");
+		    }
+		    else {
+		        System.out.println("No");
+		    }
 		}
 
 	}
