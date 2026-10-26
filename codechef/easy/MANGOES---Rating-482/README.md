@@ -56,7 +56,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-01T09:34:55.278Z  
+**Submitted:** 2026-10-26T06:20:25.175Z  
 
 ```java
 import java.util.*;
@@ -74,7 +74,7 @@ class Codechef
 		    int x=sc.nextInt();
 		    int y=sc.nextInt();
 		    int z=sc.nextInt();
-		    int maxMangoes=(z-y)/x;
+		    int maxMangoes = (z - y) / x;
 		    System.out.println(maxMangoes);
 		}
 
