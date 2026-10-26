@@ -13,7 +13,7 @@ class Codechef
 		    int x=sc.nextInt();
 		    int y=sc.nextInt();
 		    int z=sc.nextInt();
-		    int maxMangoes=(z-y)/x;
+		    int maxMangoes = (z - y) / x;
 		    System.out.println(maxMangoes);
 		}
 
